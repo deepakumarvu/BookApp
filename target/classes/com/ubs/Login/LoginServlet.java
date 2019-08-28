@@ -33,12 +33,12 @@ public class LoginServlet extends HttpServlet {
 		String pass = request.getParameter("pass");
 		PrintWriter printWriter=response.getWriter();
 		if(uname.equals("deepak") && pass.equals("123456")) {
-			printWriter.println("<font color=\"green\"><h1>Login Successful</h1></font>");
+			printWriter.println("<font color=\"green\"><h2>Login Successful</h2></font>");
 		    RequestDispatcher rd=request.getRequestDispatcher("welcome.jsp");
 		    rd.forward(request,response);
 		}
 		else {
-		    printWriter.println("<font color=\"red\"><h1>Login Un-successful</h1></font>");
+		    printWriter.println("<font color=\"red\"><h3>Login Un-successful</h3></font>");
 		    RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
 		    rd.include(request,response);
 		}
